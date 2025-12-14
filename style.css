@@ -1,0 +1,205 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #000;
+}
+
+
+.navbar-nav .nav-link {
+    position: relative;
+    padding: 8px 18px;
+    margin: 0 6px;
+    color: #ffffff !important;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffbb33 !important;
+    transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, #ff8800, #ffaa33);
+    border-radius: 2px;
+    transition: 0.4s;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+
+.carousel-item .hero {
+    height: 75vh;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: #000;
+    position: relative;
+}
+
+.carousel-item .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 100, 255, 0.25);
+    z-index: 1;
+}
+
+.hero-text {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;
+}
+
+.hero-text h1 {
+    opacity: 0.8;
+    text-shadow: 0 0 12px rgba(0,0,0,0.7);
+}
+
+.hero-text p {
+    opacity: 0.7;
+    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.page-hero {
+    height: 40vh;
+    background: url('8074b74e-5a28-4c74-9a95-e6b9f06b44f9.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.page-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 100, 255, 0.25);
+    z-index: 1;
+}
+
+.page-hero > * {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+}
+
+.contact-form button {
+    padding: 12px;
+    background: orange;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contact-form button:hover {
+    background: #ffae42;
+}
+
+.footer {
+    position: relative;
+    background: url('basketball_court.png');
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0 20px;
+    overflow: hidden;
+    color: white;
+}
+
+.footer-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75); 
+    backdrop-filter: blur(3px);
+    z-index: 1;
+}
+
+.footer .container {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-title {
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-shadow: 0 0 10px rgba(255, 136, 0, 0.6);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links li a {
+    color: #ffdd99;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.footer-links li a:hover {
+    color: #ffaa33;
+    text-shadow: 0 0 10px #ff8800;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-circle {
+    width: 45px;
+    height: 45px;
+    background: radial-gradient(circle, #ff9900, #cc6600);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 0 8px #ff8800;
+}
+
+.social-circle:hover {
+    background: radial-gradient(circle, #ffcc66, #ff8800);
+    transform: translateY(-4px) scale(1.1);
+    box-shadow: 0 0 18px #ffaa33;
+}
+
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.2);
+}
